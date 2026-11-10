@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141312"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="wallboxGrad4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2C2C2E"/>
+      <stop offset="100%" stop-color="#1C1C1E"/>
+    </linearGradient>
+    <filter id="glowGreen4" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad4)"/>
+
+  <!-- Architectural vertical wood-slat wall paneling (modern villa) -->
+  <g stroke="#22201D" stroke-width="6">
+    <line x1="80" y1="0" x2="80" y2="600"/>
+    <line x1="140" y1="0" x2="140" y2="600"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="260" y1="0" x2="260" y2="600"/>
+    <line x1="320" y1="0" x2="320" y2="600"/>
+    <line x1="380" y1="0" x2="380" y2="600"/>
+    <line x1="440" y1="0" x2="440" y2="600"/>
+    <line x1="500" y1="0" x2="500" y2="600"/>
+    <line x1="560" y1="0" x2="560" y2="600"/>
+    <line x1="620" y1="0" x2="620" y2="600"/>
+    <line x1="680" y1="0" x2="680" y2="600"/>
+    <line x1="740" y1="0" x2="740" y2="600"/>
+  </g>
+
+  <!-- Mounting backplate plate -->
+  <rect x="300" y="140" width="200" height="260" rx="20" fill="#18181A" stroke="#3A3A3C" stroke-width="1.5"/>
+
+  <!-- Compact Square Wallbox Body -->
+  <rect x="315" y="155" width="170" height="230" rx="16" fill="url(#wallboxGrad4)" stroke="#48484A" stroke-width="1.5"/>
+
+  <!-- Dark minimal glass front panel -->
+  <rect x="330" y="170" width="140" height="150" rx="12" fill="#0D0D0E" stroke="#2C2C2E" stroke-width="1"/>
+
+  <!-- Ambient glowing status ring -->
+  <circle cx="400" cy="245" r="38" fill="none" stroke="#242426" stroke-width="5"/>
+  <circle cx="400" cy="245" r="38" fill="none" stroke="#30C27C" stroke-width="4" stroke-dasharray="160 80" filter="url(#glowGreen4)"/>
+
+  <!-- Inner plug silhouette & green power icon -->
+  <circle cx="400" cy="245" r="14" fill="#1C1C1E" stroke="#30C27C" stroke-width="2"/>
+  <path d="M398 238 L394 246 L401 246 L397 253 L406 243 L400 243 Z" fill="#30C27C"/>
+
+  <!-- Rating / Power Specs -->
+  <text x="400" y="348" text-anchor="middle" fill="#A1A1A6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" letter-spacing="1">7.4 kW · MONOFAZE</text>
+  <text x="400" y="368" text-anchor="middle" fill="#30C27C" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">HAZIR</text>
+
+  <!-- Wall-mounted cable hook below -->
+  <rect x="385" y="420" width="30" height="25" rx="5" fill="#242426" stroke="#3A3A3C" stroke-width="1.5"/>
+  <!-- Neatly looped charging cable -->
+  <path d="M400 385 C 400 460, 480 470, 480 430 C 480 390, 320 390, 320 430 C 320 470, 400 470, 400 385" fill="none" stroke="#18181A" stroke-width="12" stroke-linecap="round"/>
+  <path d="M400 385 C 400 460, 480 470, 480 430 C 480 390, 320 390, 320 430 C 320 470, 400 470, 400 385" fill="none" stroke="#2C2C2E" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Station Badge -->
+  <style>
+    @media (max-width: 600px) {
+      .station-badge-small { display: none; }
+    }
+  </style>
+  <g class="station-badge-small" transform="translate(40, 40)">
+    <rect width="210" height="34" rx="17" fill="#1C1C1E" stroke="#2C2C2E" stroke-width="1"/>
+    <circle cx="18" cy="17" r="4" fill="#30C27C"/>
+    <text x="32" y="21" fill="#F5F5F7" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">Örnek · 7 kW Wallbox</text>
+  </g>
+</svg>

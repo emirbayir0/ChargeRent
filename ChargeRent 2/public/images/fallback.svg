@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#141416"/>
+  <rect x="20" y="20" width="360" height="260" rx="16" fill="#1C1C1E" stroke="#2C2C2E" stroke-width="1.5"/>
+  <circle cx="200" cy="130" r="44" fill="#242426" stroke="#3A3A3C" stroke-width="1.5"/>
+  <path d="M195 106 L187 132 L201 132 L193 154 L213 126 L199 126 Z" fill="#30C27C"/>
+  <text x="200" y="205" text-anchor="middle" fill="#A1A1A6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">Şarj İstasyonu</text>
+</svg>

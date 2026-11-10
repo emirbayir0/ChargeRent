@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C1C1E" />
+      <stop offset="100%" stop-color="#141416" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#30C27C" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#30C27C" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#000000" />
+  
+  <!-- Subtle ambient glow -->
+  <circle cx="240" cy="200" r="260" fill="#30C27C" opacity="0.06" />
+
+  <!-- Main Container Card -->
+  <rect x="48" y="48" width="1104" height="534" rx="32" fill="url(#cardGrad)" stroke="#2C2C2E" stroke-width="1.5" />
+
+  <!-- Lightning Icon Badge -->
+  <g transform="translate(112, 120)">
+    <rect width="64" height="64" rx="18" fill="#1C1C1E" stroke="#2C2C2E" stroke-width="1.5" />
+    <path d="M36 10 L14 36 L32 36 L28 54 L50 28 L32 28 Z" fill="#30C27C" />
+  </g>
+
+  <!-- Wordmark -->
+  <text x="196" y="168" fill="#F5F5F7" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif" font-size="56" font-weight="bold" letter-spacing="-1.5">ChargeRent</text>
+
+  <!-- Main Slogan -->
+  <text x="112" y="290" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif" font-size="48" font-weight="700" letter-spacing="-1">Komşunun şarj cihazını saatlik kirala.</text>
+
+  <!-- Subtitle -->
+  <text x="112" y="360" fill="#A1A1A6" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif" font-size="24" font-weight="400">Boş duran şarj cihazını gelire çevir, ya da yakınındaki şarj noktasını bul.</text>
+  <text x="112" y="400" fill="#77777A" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif" font-size="20">Demo sürüm · Veriler örnektir</text>
+
+  <!-- Bottom Accent Pill -->
+  <g transform="translate(112, 470)">
+    <rect width="340" height="44" rx="22" fill="#000000" stroke="#2C2C2E" stroke-width="1" />
+    <circle cx="24" cy="22" r="5" fill="#30C27C" />
+    <text x="40" y="28" fill="#30C27C" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600">P2P Elektrikli Araç Şarj Paylaşımı</text>
+  </g>
+</svg>

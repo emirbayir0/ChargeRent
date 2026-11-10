@@ -1,0 +1,211 @@
+:root {
+  --bg-primary: #000000;
+  --bg-surface: #1C1C1E;
+  --border-divider: #2C2C2E;
+  --border-card: #3A3A3C;
+  
+  --text-primary: #F5F5F7;
+  --text-secondary: #A1A1A6;
+  
+  --accent-green: #30C27C;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+* {
+  border-color: var(--border-divider);
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tabular Numbers */
+.tabular-nums, .font-mono, [data-numeric] {
+  font-variant-numeric: tabular-nums;
+  font-family: inherit;
+}
+
+/* Headings */
+.hero-title {
+  font-size: clamp(24px, 5.5vw, 48px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+/* Search Bar Pill */
+.search-pill-container {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-divider);
+  border-radius: 9999px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-divider {
+  width: 1px;
+  height: 32px;
+  background-color: var(--border-divider);
+}
+
+/* Filter Chips (Pill Buttons) */
+.filter-chip {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.filter-chip-active {
+  background-color: #F5F5F7;
+  color: #000000;
+  font-weight: 600;
+  border: 1px solid #F5F5F7;
+}
+
+.filter-chip-inactive {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-divider);
+}
+
+.filter-chip-inactive:hover {
+  border-color: var(--border-card);
+  background-color: #242426;
+}
+
+/* Station Card Elements */
+.station-image-placeholder {
+  background-color: var(--bg-surface);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 13px;
+  aspect-ratio: 16 / 10;
+  width: 100%;
+}
+
+.super-host-pill {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(28, 28, 30, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Küçük görünümde (mobil / < 640px) illüstrasyon etiketlerini gizle, yalnızca büyük görünümde göster */
+@media (max-width: 640px) {
+  .super-host-pill,
+  .station-badge-small {
+    display: none !important;
+  }
+}
+
+/* Map Elements */
+.dark-map-container {
+  background: #141416;
+  border: 1px solid var(--border-divider);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-price-pill {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.map-price-pill:hover, .map-price-pill.active {
+  background: #F5F5F7;
+  color: #000000;
+  transform: scale(1.06);
+}
+
+.map-fuzzy-circle {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Leaflet Custom Minimalist Styling */
+.leaflet-container {
+  background: #101012 !important;
+  font-family: inherit !important;
+}
+
+.leaflet-tile-container img {
+  filter: brightness(0.4) invert(1) contrast(1.4) hue-rotate(205deg) saturate(0) brightness(0.65) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2C2C2E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3A3A3C;
+}
+
+/* Touch scroll helper & hidden scrollbar for swipeable strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}

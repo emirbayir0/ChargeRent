@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121214"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+    <linearGradient id="wallboxGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#242428"/>
+      <stop offset="100%" stop-color="#141416"/>
+    </linearGradient>
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad1)"/>
+
+  <!-- Architectural garage wall pattern (subtle lines) -->
+  <g stroke="#1F1F24" stroke-width="1.2" opacity="0.6">
+    <line x1="0" y1="120" x2="800" y2="120"/>
+    <line x1="0" y1="240" x2="800" y2="240"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="0" y1="480" x2="800" y2="480"/>
+    
+    <line x1="180" y1="0" x2="180" y2="120"/>
+    <line x1="560" y1="0" x2="560" y2="120"/>
+    <line x1="360" y1="120" x2="360" y2="240"/>
+    <line x1="720" y1="120" x2="720" y2="240"/>
+    <line x1="140" y1="240" x2="140" y2="360"/>
+    <line x1="600" y1="240" x2="600" y2="360"/>
+    <line x1="280" y1="360" x2="280" y2="480"/>
+    <line x1="680" y1="360" x2="680" y2="480"/>
+    <line x1="160" y1="480" x2="160" y2="600"/>
+    <line x1="520" y1="480" x2="520" y2="600"/>
+  </g>
+
+  <!-- Wall mounting backplate -->
+  <rect x="290" y="110" width="220" height="340" rx="28" fill="#18181B" stroke="#2C2C2E" stroke-width="2"/>
+
+  <!-- Main Wallbox Body -->
+  <rect x="310" y="130" width="180" height="300" rx="22" fill="url(#wallboxGrad1)" stroke="#3A3A3C" stroke-width="1.5"/>
+
+  <!-- Subtle brandless glossy front fascia -->
+  <rect x="325" y="150" width="150" height="180" rx="14" fill="#0A0A0C" stroke="#2C2C2E" stroke-width="1"/>
+
+  <!-- Glowing LED status ring (Online / Ready) -->
+  <circle cx="400" cy="225" r="42" fill="none" stroke="#1C1C1E" stroke-width="6"/>
+  <circle cx="400" cy="225" r="42" fill="none" stroke="#30C27C" stroke-width="4" stroke-dasharray="190 80" filter="url(#glowGreen)"/>
+  <circle cx="400" cy="225" r="14" fill="#1C1C1E" stroke="#30C27C" stroke-width="2"/>
+  <path d="M398 217 L394 226 L401 226 L397 234 L406 223 L400 223 Z" fill="#30C27C"/>
+
+  <!-- Status / Power Spec Text -->
+  <text x="400" y="300" text-anchor="middle" fill="#A1A1A6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" letter-spacing="1">TYPE 2 · 22 kW</text>
+  <text x="400" y="380" text-anchor="middle" fill="#30C27C" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500">MÜSAİT</text>
+
+  <!-- Side Heavy Cable and Holster -->
+  <path d="M400 430 C 400 520, 520 540, 560 480 C 600 420, 570 330, 520 330 C 470 330, 480 430, 530 450 C 580 470, 610 390, 590 320" fill="none" stroke="#18181A" stroke-width="14" stroke-linecap="round"/>
+  <path d="M400 430 C 400 520, 520 540, 560 480 C 600 420, 570 330, 520 330 C 470 330, 480 430, 530 450 C 580 470, 610 390, 590 320" fill="none" stroke="#2C2C2E" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Cable wall holster on the right -->
+  <rect x="575" y="270" width="30" height="55" rx="8" fill="#1C1C1E" stroke="#3A3A3C" stroke-width="1.5"/>
+  <!-- Plug handle resting in holster -->
+  <path d="M575 285 L545 280 L540 310 L575 315 Z" fill="#242426" stroke="#3A3A3C" stroke-width="1.5"/>
+
+  <!-- Ambient lighting beam -->
+  <polygon points="360,600 440,600 420,440 380,440" fill="#30C27C" opacity="0.04"/>
+
+  <!-- Badge in corner -->
+  <style>
+    @media (max-width: 600px) {
+      .station-badge-small { display: none; }
+    }
+  </style>
+  <g class="station-badge-small" transform="translate(40, 40)">
+    <rect width="190" height="34" rx="17" fill="#1C1C1E" stroke="#2C2C2E" stroke-width="1"/>
+    <circle cx="18" cy="17" r="4" fill="#30C27C"/>
+    <text x="32" y="21" fill="#F5F5F7" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">Örnek · 22 kW Wallbox</text>
+  </g>
+</svg>

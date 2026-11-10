@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E1015"/>
+      <stop offset="100%" stop-color="#07080A"/>
+    </linearGradient>
+    <linearGradient id="pillarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2A2A2E"/>
+      <stop offset="50%" stop-color="#1C1C1E"/>
+      <stop offset="100%" stop-color="#141416"/>
+    </linearGradient>
+    <filter id="glowGreen2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad2)"/>
+
+  <!-- Outdoor parking floor / horizon line -->
+  <line x1="0" y1="460" x2="800" y2="460" stroke="#2C2C2E" stroke-width="2"/>
+  
+  <!-- Parking Bay Marking on asphalt -->
+  <polygon points="120,600 240,460 260,460 145,600" fill="#2C2C2E" opacity="0.4"/>
+  <polygon points="680,600 560,460 540,460 655,600" fill="#2C2C2E" opacity="0.4"/>
+  
+  <!-- Subtle distant tree silhouette line (outdoor mood) -->
+  <path d="M0 450 Q 80 440, 150 455 T 300 450 T 500 452 T 700 448 T 800 452 L 800 460 L 0 460 Z" fill="#141518" opacity="0.5"/>
+
+  <!-- Pedestal Foundation Concrete Plinth -->
+  <polygon points="340,475 460,475 480,490 320,490" fill="#1C1C1E" stroke="#3A3A3C" stroke-width="1.5"/>
+
+  <!-- Slim Bollard / Pedestal Body -->
+  <rect x="360" y="160" width="80" height="315" rx="10" fill="url(#pillarGrad)" stroke="#3A3A3C" stroke-width="1.5"/>
+
+  <!-- Top Protective Canopy Cap -->
+  <polygon points="340,160 460,160 445,140 355,140" fill="#2C2C2E" stroke="#48484A" stroke-width="1.5"/>
+
+  <!-- Vertical Status LED Lightbar -->
+  <rect x="397" y="180" width="6" height="110" rx="3" fill="#30C27C" filter="url(#glowGreen2)"/>
+
+  <!-- Type 2 Socket Port with Weather Flap -->
+  <rect x="380" y="315" width="40" height="48" rx="8" fill="#0A0A0C" stroke="#2C2C2E" stroke-width="1.5"/>
+  <circle cx="400" cy="339" r="14" fill="#18181A" stroke="#30C27C" stroke-width="2"/>
+  <!-- Pin indicators -->
+  <circle cx="395" cy="334" r="2" fill="#8E8E93"/>
+  <circle cx="405" cy="334" r="2" fill="#8E8E93"/>
+  <circle cx="393" cy="341" r="2" fill="#8E8E93"/>
+  <circle cx="407" cy="341" r="2" fill="#8E8E93"/>
+  <circle cx="400" cy="346" r="2" fill="#8E8E93"/>
+
+  <!-- Specification text -->
+  <text x="400" y="395" text-anchor="middle" fill="#A1A1A6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">11 kW · AC</text>
+  <text x="400" y="420" text-anchor="middle" fill="#30C27C" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">ONLINE</text>
+
+  <!-- Ground light pool -->
+  <ellipse cx="400" cy="495" rx="90" ry="14" fill="#30C27C" opacity="0.08"/>
+
+  <!-- Station Badge -->
+  <style>
+    @media (max-width: 600px) {
+      .station-badge-small { display: none; }
+    }
+  </style>
+  <g class="station-badge-small" transform="translate(40, 40)">
+    <rect width="210" height="34" rx="17" fill="#1C1C1E" stroke="#2C2C2E" stroke-width="1"/>
+    <circle cx="18" cy="17" r="4" fill="#30C27C"/>
+    <text x="32" y="21" fill="#F5F5F7" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">Örnek · 11 kW Pedestal</text>
+  </g>
+</svg>

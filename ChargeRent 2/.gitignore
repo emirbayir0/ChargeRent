@@ -1,0 +1,45 @@
+# ==========================================
+# ChargeRent - Git Ignore Kuralları
+# ==========================================
+
+# 1. Veritabanı Dosyaları (Kullanıcı ve işlem verileri)
+chargerent.db
+backend/chargerent.db
+*.db
+*.sqlite
+*.sqlite3
+
+# 2. Gizli Ortam Değişkenleri ve Anahtarlar
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# 3. Python Çalışma Zamanı ve Önbellekler
+__pycache__/
+*.py[cod]
+*$py.class
+backend/vendor/
+.pytest_cache/
+
+# 4. İşletim Sistemi ve IDE Dosyaları
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+
+# Tüm yerel ortam ayarları ve veritabanı yan dosyaları
+.env.*
+!.env.example
+*.db-*
+*.sqlite-*
+*.sqlite3-*
+*.log
+*.bak
+*.p12
+*.pfx
+.venv/
+venv/
+node_modules/
